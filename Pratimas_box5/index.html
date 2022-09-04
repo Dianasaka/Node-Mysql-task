@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+<style>
+    .flexbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .flexbox div:nth-child(2) {
+        margin: 10px;
+    }
+
+    .flexbox div:nth-child(odd) {
+        background-color: brown;
+    }
+     
+     body> div.flexbox:last-child {
+        margin: 10px;
+     }
+</style>
+<body>
+    <div class="flexbox">
+       <div style="height: 150px; width: 150px; padding: 30px; border: 4px;"></div>
+       <div style="background-color: blue; height: 150px; width: 150px; padding: 30px; border: 4px;"></div>
+       <div style="height: 100px; width: 70px; border: 4px;"></div>
+    </div>
+
+</body>
+</html>
