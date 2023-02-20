@@ -1,0 +1,20 @@
+* {
+    text-align: center;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+#register-button {
+    width: 84px;
+    flex-grow: 2;
+    color: rgb(80, 57, 57);
+    margin-top: 10px;
+    text-align: center;
+}
