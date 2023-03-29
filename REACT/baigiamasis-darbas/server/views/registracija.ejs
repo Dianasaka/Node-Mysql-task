@@ -1,0 +1,44 @@
+<%- include("./partials/head.ejs") %>
+<%- include("./partials/header.ejs") %>
+
+  <main class="gridOneRow">
+    <%- include("./partials/navigacija.ejs") %>
+    <form action="/registracija" method="post" class="gridOneRow" id="regForm">
+      <div>
+        <div>
+          <label for="vardas">Vardas</label>
+          <input type="text" name="vardas" id="vardas" placeholder="Svečio vardas" size="30px" required>
+        </div>
+        <div>
+          <label for="pavarde">Pavardė</label>
+          <input type="text" name="pavarde" id="pavarde" placeholder="Svečio pavardė" size="30px" required>
+        </div>
+        <div>
+          <label for="email">Nurodytas el. paštas</label>
+          <input type="email" name="el_pastas" id="el_pastas" placeholder="example@mail.com" size="30px" required>
+        </div>
+        <div>
+          <label for="amzius">Amžius</label>
+          <input type="number" name="amzius" id="amzius" placeholder="Amžius skaičiais" size="30px" required>
+        </div>
+        <div>
+          <label for="gimtadienis">Gimimo data</label>
+          <input type="date" name="gimimo_data" id="gimimo_data" size="30px" required>
+        </div>
+        <div>
+          <label for="renginys">Pasirinkite renginį:</label>
+          <select name="renginio_id" id="renginys">
+            <% results.forEach(function(result) { %>
+              <option value=<%= result.renginio_id %>><%= result.pavadinimas %></option>
+              <% }); %>
+          </select> 
+        </div>
+        <div>
+          <input type="submit" value="Pateikti">
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+
+<%- include("./partials/footer.ejs") %>

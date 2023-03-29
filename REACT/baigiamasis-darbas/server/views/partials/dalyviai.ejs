@@ -1,0 +1,29 @@
+<%- include("./partials/head.ejs") %>
+<%- include("./partials/header.ejs") %>
+<main class="gridOneRow">
+    <%- include("./partials/navigacija.ejs") %>
+    <table>
+        <thead>
+          <tr>
+            <th>Vardas</th>
+            <th>Pavardė</th>
+            <th>El. paštas</th>
+            <th>Amžius</th>
+            <th>Gimimo data</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <% duomenys.forEach(function(data) { %>
+            <tr>
+                <td><%= data.vardas %></td>
+                <td><%= data.pavarde %></td>
+                <td><%= data.el_pastas %></td>
+                <td><%= data.amzius %></td>
+                <td><%= data.gimimo_data %></td>
+              </tr>
+            <% }); %>
+      </table>
+</main>
+
+
+<%- include("./partials/footer.ejs") %>
